@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+body{
+    font-family: "roboto",sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+   list-style: 0;
+   text-decoration: none;
+}
+
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #ffffff;
+    transition: all 0.4s ease;
+    z-index: 2222;
+    background-color: #ffffff;
+}
+
+.name{
+    line-height: 65px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(225, 225,225, .1);
+    transition: 0.4s;
+}
+ul li:hover a{
+    padding-left: 50px
+}
+.sidebar ul a i{
+    margin-right: 16px;
+}
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    transition: all 0.4s;
+}
+label #cancel{
+    z-index: 3333;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #000000;
+    padding: 4px 9px;
+    transition: all 0.4s;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
